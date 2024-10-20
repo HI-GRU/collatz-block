@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,5 +26,21 @@ public class Grid : MonoBehaviour
                 rows[i].cells[j].coordinates = new Vector2Int(j, i);
             }
         }
+    }
+
+    public Cell GetRandomEmptyCell()
+    {
+        int index = UnityEngine.Random.Range(0, cells.Length);
+
+        int count = 0;
+        while (count != size && !cells[index].empty)
+        {
+            index = (index + 1) % size;
+            count++;
+        }
+
+        if (count == size) return null;
+
+        return cells[index];
     }
 }

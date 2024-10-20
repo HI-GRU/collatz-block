@@ -1401,6 +1401,7 @@ GameObject:
   - component: {fileID: 1675841032}
   - component: {fileID: 1675841034}
   - component: {fileID: 1675841033}
+  - component: {fileID: 1675841035}
   m_Layer: 0
   m_Name: Board
   m_TagString: Board
@@ -1466,6 +1467,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675841031}
   m_CullTransparentMesh: 1
+--- !u!114 &1675841035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675841031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17f0c24b98cd4744ab4bef5cd245733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 6898188956191755018, guid: d1d149b54830e764a8b318168b865470, type: 3}
+  tileStates:
+  - {fileID: 11400000, guid: d1efad1b85ad7f349a1bca3ea4d5ce1a, type: 2}
+  - {fileID: 11400000, guid: a318c79f6f4da5542a72f8228499ed09, type: 2}
+  - {fileID: 11400000, guid: 4c204036aa5c75e45929f634cb655066, type: 2}
+  - {fileID: 11400000, guid: a4ccfc63d02565243b8a754b7c4d91e6, type: 2}
+  - {fileID: 11400000, guid: 8cd86ca9e69f86e49828fec7ff0e12d8, type: 2}
+  - {fileID: 11400000, guid: 9409ac0b2f4ba4945aa2e0d25da8e5e0, type: 2}
+  - {fileID: 11400000, guid: 8be62164c92cc614aa78631cc3e29c79, type: 2}
+  - {fileID: 11400000, guid: d194da63abda10342b739f7e33e40b6e, type: 2}
+  - {fileID: 11400000, guid: 19988aa046e0e354aa4ade9b1dd43b2d, type: 2}
+  - {fileID: 11400000, guid: 5ad38627d5a22c0429d13fb105f3494b, type: 2}
+  - {fileID: 11400000, guid: b2e176ebefd665d44bf470bb85f6c3cb, type: 2}
+  - {fileID: 11400000, guid: ec8480e29a943234a9e25b8075d92741, type: 2}
+  - {fileID: 11400000, guid: 8d14230727970eb48adf9640ef2d4b78, type: 2}
+  - {fileID: 11400000, guid: 512aa83ec144794498e4593274b54da7, type: 2}
+  - {fileID: 11400000, guid: 0d0e3b4a4cc41b54bbbe760001f1d3c0, type: 2}
+  - {fileID: 11400000, guid: 6d0d2122217fd304f907337f1b2bb798, type: 2}
+  - {fileID: 11400000, guid: 069871b58c67e0045a475d4350948658, type: 2}
+  - {fileID: 11400000, guid: c85bfeae8444aa74f849eab56caa3710, type: 2}
 --- !u!1 &1826409440
 GameObject:
   m_ObjectHideFlags: 0
