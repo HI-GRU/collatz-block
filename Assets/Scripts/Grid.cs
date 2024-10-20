@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Grid : MonoBehaviour
@@ -15,17 +16,8 @@ public class Grid : MonoBehaviour
     {
         rows = GetComponentsInChildren<Row>();
         cells = GetComponentsInChildren<Cell>();
-    }
 
-    private void Start()
-    {
-        for (int i = 0; i < height; i++)
-        {
-            for (int j = 0; j < width; j++)
-            {
-                rows[i].cells[j].coordinates = new Vector2Int(j, i);
-            }
-        }
+        for (int i = 0; i < size; i++) cells[i].coordinates = new Vector2Int(i % width, i / width);
     }
 
     public Cell GetRandomEmptyCell()
@@ -42,5 +34,23 @@ public class Grid : MonoBehaviour
         if (count == size) return null;
 
         return cells[index];
+    }
+
+    public Cell GetCell(int x, int y)
+    {
+        if (IsBounded(x, y)) return rows[y].cells[x];
+        return null;
+    }
+
+    public Cell GetAdjacentCell(Cell currentCell, Vector2Int direction)
+    {
+        Vector2Int coordinates = currentCell.coordinates;
+
+        return GetCell(coordinates.x + direction.x, coordinates.y - direction.y);
+    }
+
+    private bool IsBounded(int x, int y)
+    {
+        return y >= 0 && y < height && x >= 0 && x < width;
     }
 }

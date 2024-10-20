@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,6 @@ public class Row : MonoBehaviour
 
     private void Awake()
     {
-        cells = GetComponents<Cell>();
+        cells = GetComponentsInChildren<Cell>();
     }
 }
