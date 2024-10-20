@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TileState state { get; private set; }
+    public Cell cell { get; private set; }
+    public int number { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
