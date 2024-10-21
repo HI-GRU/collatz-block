@@ -48,6 +48,24 @@ public class Tile : MonoBehaviour
 
         this.cell = cell;
         this.cell.tile = this;
-        transform.position = cell.transform.position;
+
+        StartCoroutine(Animate(cell.transform.position));
+    }
+
+    private IEnumerator Animate(Vector2 to)
+    {
+        float elapsed = 0F;
+        float duration = GameManager.Instance.GetDuration();
+
+        Vector2 from = transform.position;
+
+        while (elapsed < duration)
+        {
+            transform.position = Vector2.Lerp(from, to, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = to;
     }
 }
